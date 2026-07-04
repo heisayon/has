@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
 /* ---------------------------------------------------------------
@@ -58,7 +57,6 @@ h1, h2, h3, h4 {
 --------------------------------------------------------------- */
 
 /* Eyebrow label above section headings */
-
 .eyebrow {
   display: inline-block;
   font-size: 0.75rem;
@@ -69,7 +67,6 @@ h1, h2, h3, h4 {
 }
 
 /* Signature "margin line" — ruled register look on Why HAS / FAQ */
-
 .register-rule {
   position: relative;
   padding-left: 1.5rem;
@@ -77,7 +74,6 @@ h1, h2, h3, h4 {
 }
 
 /* Hand-check bullet, reinforces roll-call motif */
-
 .check-mark {
   display: flex;
   height: 2rem;
@@ -105,7 +101,6 @@ h1, h2, h3, h4 {
   color: var(--paper);
   transition: background-color 0.3s cubic-bezier(0.65,0,0.35,1);
 }
-
 .btn-primary:hover {
   background-color: var(--gold-dark);
 }
@@ -124,7 +119,6 @@ h1, h2, h3, h4 {
   color: var(--ink);
   transition: all 0.3s cubic-bezier(0.65,0,0.35,1);
 }
-
 .btn-secondary:hover {
   border-color: var(--ink);
   background-color: var(--ink);
@@ -138,7 +132,6 @@ h1, h2, h3, h4 {
   box-shadow: 0 1px 2px rgba(42,33,24,0.04);
   transition: transform 0.3s cubic-bezier(0.65,0,0.35,1), box-shadow 0.3s cubic-bezier(0.65,0,0.35,1);
 }
-
 .card:hover {
   transform: translateY(-0.25rem);
   box-shadow: 0 20px 40px -24px rgba(42,33,24,0.18);
@@ -159,13 +152,11 @@ h1, h2, h3, h4 {
 }
 
 /* Scroll reveal — .is-visible toggled via JS on intersection */
-
 .reveal {
   opacity: 0;
   transform: translateY(1.5rem);
   transition: opacity 0.7s cubic-bezier(0.65,0,0.35,1), transform 0.7s cubic-bezier(0.65,0,0.35,1);
 }
-
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);

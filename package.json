@@ -2,10 +2,12 @@
   "name": "her-after-school",
   "version": "1.0.0",
   "description": "Landing page for Her After School (HAS)",
-  "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "start": "serve . -l ${PORT:-3000}"
+
+    "scripts": {
+  "build": "tailwindcss -i ./src/input.css -o ./css/output.css --minify",
+  "watch": "tailwindcss -i ./src/input.css -o ./css/output.css --watch",
+  "start": "serve . -l ${PORT:-3000}"
+
   },
   "devDependencies": {
     "tailwindcss": "^3.4.13"

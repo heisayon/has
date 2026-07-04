@@ -4,9 +4,13 @@
   "description": "Landing page for Her After School (HAS)",
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "start": "serve . -l ${PORT:-3000}"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
   }
 }

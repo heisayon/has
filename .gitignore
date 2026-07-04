@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output (Tailwind compiles this on `npm run build`;
+# uncomment the line below to keep it out of git entirely.
+# Keep it committed if you're deploying as static files with no build step.)
+# dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Env files (if you add any later, e.g. for form/email services)
+.env
+.env.local

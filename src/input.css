@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+  }
+  :focus-visible {
+    outline: 2px solid theme('colors.gold.DEFAULT');
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Eyebrow label — used above section headings, e.g. "OUR PHILOSOPHY" */
+  .eyebrow {
+    @apply inline-block font-body text-xs font-semibold uppercase tracking-eyebrow text-gold-dark;
+  }
+
+  /* Signature structural device: a ruled "margin line", echoing a
+     notebook / class register — used to mark sections tied to the
+     "back in session" concept (Why HAS, Programs, FAQ). */
+  .register-rule {
+    @apply relative pl-6 border-l border-gold-light/70;
+  }
+
+  /* Hand-check mark bullet, replacing generic icon bullets in the
+     "Why HAS" values list — reinforces the roll-call / attendance motif. */
+  .check-mark {
+    @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold text-gold-dark text-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-8 py-3.5 font-body text-sm font-semibold text-cream transition duration-300 ease-elegant hover:bg-gold-dark;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/20 px-8 py-3.5 font-body text-sm font-semibold text-ink transition duration-300 ease-elegant hover:border-ink hover:bg-ink hover:text-cream;
+  }
+
+  .card {
+    @apply rounded-2xl bg-paper p-8 shadow-[0_1px_2px_rgba(42,33,24,0.04)] transition duration-300 ease-elegant hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(42,33,24,0.18)];
+  }
+
+  .img-placeholder {
+    @apply flex items-center justify-center rounded-2xl border border-dashed border-ink/20 bg-sage-light/40 font-body text-xs uppercase tracking-eyebrow text-ink-soft;
+  }
+
+  /* Scroll reveal, toggled via JS (adds .is-visible on intersection) */
+  .reveal {
+    @apply opacity-0 translate-y-6 transition duration-700 ease-elegant;
+  }
+  .reveal.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
